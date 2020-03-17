@@ -2,6 +2,8 @@ package com.liferay.tutorial.search;
 
 import javax.portlet.PortletRequest;
 
+import com.liferay.portal.kernel.util.ParamUtil;
+
 //Với tìm kiếm chưa phức tạp ta không thấy bất kì sự mở rộng nào của
 //HoaDonSearchTerms so với HoaDonDisplayTerms
 //Tuy nhiên với form tìm kiếm phức tạp sẽ có khác biệt giữa HoaDonDisplayTerms và HoaDonSerchTerms
@@ -11,6 +13,15 @@ public class HoaDonSearchTerms extends HoaDonDisplayTerms{//Terms: Điều kiệ
 
 	public HoaDonSearchTerms(PortletRequest portletRequest) {
 		super(portletRequest);
+		
+		soHD = ParamUtil.getInteger(portletRequest, "soHD");
+		thayDoiNN = ParamUtil.getBoolean(portletRequest, "thayDoiNN");
+		tongTien = ParamUtil.getFloat(portletRequest, "tongTien");
+		ngayDat = ParamUtil.getDate(portletRequest, "ngayDat", DATE_FORMAT);
+		ngayGiao = ParamUtil.getDate(portletRequest, "ngayGiao", DATE_FORMAT);
+		tinhTrangDH = ParamUtil.getString(portletRequest, "tinhTrangDH");
+		maNVGiao = ParamUtil.getInteger(portletRequest, "maNVGiao");
+		maKH = ParamUtil.getInteger(portletRequest, "maKH");
 	}
 
 }

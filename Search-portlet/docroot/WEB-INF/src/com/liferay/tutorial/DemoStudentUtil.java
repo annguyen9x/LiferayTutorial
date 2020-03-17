@@ -127,7 +127,10 @@ public class DemoStudentUtil {
 		for (Student student : students) {
 
 			boolean isMatched = true;
+			
+			//Tìm kiếm theo điều kiện có cùng (hoặc chuỗi trong chuỗi) mã code, tên, giới tính 
 			if (searchTerms.getCode() != null && !searchTerms.getCode().isEmpty()) {
+				//contains tìm kiếm chuỗi kí tự trong chuỗi
 				if (!student.getCode().contains(searchTerms.getCode())) {
 
 					isMatched = false;
