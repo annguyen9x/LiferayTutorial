@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.annguyen.kyanhbooks">
+	<author>AnNguyen</author>
+	<namespace>kyanhbooks</namespace>
+
+	<entity name="LoaiSach" local-service="true" remote-service="true" table="LoaiSach">
+
+		<!-- PK fields -->
+		<column name="MaLoaiSach" type="String" primary="true" db-name="MaLoaiSach"/>
+
+		<!-- Other fields -->
+
+		<column name="TenLoaiSach" type="String" db-name="TenLoaiSach"/>
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="TenLoaiSach" />
+		</order>
+
+		<!-- Finder methods -->
+	</entity>
+</service-builder>
